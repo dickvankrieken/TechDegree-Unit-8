@@ -1,0 +1,111 @@
+body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: #575757;
+    background-color: #FCFCFC;
+}
+
+.container {
+    margin: 20px auto;
+    width: 80vw;
+}
+
+h1 {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    color: black;
+    font-family: 'Nunito', sans-serif;
+}
+
+.card {
+    border: 1.5px solid #DBDBDB;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.card > img, .modal-content > img {
+    border-radius: 50%;
+    width: 100px;
+    margin: 20px;
+}
+
+.text-container {
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+.overlay {
+    position: absolute;
+    top: -30px;;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    background: rgba(100, 100, 100, 0.4);
+}
+
+.modal {
+    width: 375px;
+    margin: 80px auto auto;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #778;
+    border-radius: 5px;
+    padding: 30px 20px;
+}
+
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: minmax(0, 1fr);
+
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+/* media queries */
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 95vw;
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+}
+
+@media only screen and (min-width: 1150px) {
+    .container {
+    }
+    .grid-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin: 0 auto;
+    }
+
+    .card {
+    }
+
+    
+}
