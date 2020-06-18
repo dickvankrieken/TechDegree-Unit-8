@@ -10,10 +10,22 @@ body {
     width: 80vw;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#finduserbox {
+    border-radius: 5px;
+}
+
 h1 {
     font-size: 15px;
     text-transform: uppercase;
 }
+
+
 
 h1, h2 {
     color: black;
@@ -26,7 +38,7 @@ h1, h2 {
     background-color: white;
 }
 
-.card > img, .modal-content > img {
+.card > img, .avatar {
     border-radius: 50%;
     width: 100px;
     margin: 20px;
@@ -38,7 +50,7 @@ h1, h2 {
 }
 
 .overlay {
-    position: absolute;
+    position: fixed;
     top: -30px;;
     left: 0;
     right: 0;
@@ -62,9 +74,26 @@ h1, h2 {
     position: absolute;
     right: 15px;
     top: 5px;
+    margin-top: 20px;
+    font-size: 20px;
     border: none;
     cursor: pointer;
     background-color: white;
+}
+
+.left-arrow, .right-arrow {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#modal-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#img-text-flex {
+    flex-direction: row;
 }
 
 .hidden {
@@ -87,6 +116,11 @@ h1, h2 {
 /* media queries */
 
 @media only screen and (min-width: 768px) {
+    header {
+        justify-content: space-between;
+        flex-direction: row;
+
+    }
     .container {
         width: 95vw;
     }
